@@ -1,0 +1,8 @@
+com\restar\testCases\NewIssueTest.class
+com\restar\pages\DashboardPage.class
+com\restar\pages\RepositoriesPage.class
+com\restar\utility\Utils.class
+com\restar\pages\IssuePage.class
+com\restar\pages\LoginPage.class
+com\restar\pages\ProjectPage.class
+com\restar\testCases\BaseTestClass.class
