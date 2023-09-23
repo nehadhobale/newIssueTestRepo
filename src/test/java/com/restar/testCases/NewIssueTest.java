@@ -15,7 +15,7 @@ public class NewIssueTest extends BaseTestClass {
     public void verify_newIssue_functionality() {
         login.doLogin(Utils.decode(properties.getProperty("username")), Utils.decode(properties.getProperty("password")));
         dashboard.openRepositories();
-        repo.doSearch("rstar-test");
+        repo.doSearch("reStarTestRepo");
         String issueTitle = "Issue" + Utils.generateIssueNumber();
         project.createNewIssue(issueTitle, "New issue is created");
         Assert.assertEquals(issueTitle, issuePage.getIssueTitle(), "Issue Title is not matching");
