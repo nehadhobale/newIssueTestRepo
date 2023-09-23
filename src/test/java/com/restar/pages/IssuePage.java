@@ -15,10 +15,12 @@ public class IssuePage {
     By openIssue = By.xpath("(//span[@title='Status: Open'])[1]");
 
     public String getIssueTitle() {
+        //give issue title
         return driver.findElement(issueGenerate).getText();
     }
 
     public Boolean verifyOpenStatus() {
+        //give count of open new issue
         return driver.findElements(openIssue).size() > 0;
     }
 

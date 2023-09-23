@@ -11,7 +11,7 @@ public class RepositoriesPage {
     //Locators
     By search = By.xpath("//input[@id='your-repos-filter']");
     By project = By.xpath("(//li[@itemprop='owns'])[1]//h3/a");
-   // By project = By.xpath("//a[normalize-space()='rstar-test']");
+
 
     public void doSearch(String projectName){
         //Providing repository name

@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.*;
 
 
+import java.time.Duration;
 import java.util.Properties;
 
 public class BaseTestClass {
@@ -25,6 +26,8 @@ public class BaseTestClass {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(options);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
         login = new LoginPage(driver);
         dashboard = new DashboardPage(driver);
         repo = new RepositoriesPage(driver);

@@ -4,20 +4,15 @@ import com.restar.utility.Utils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
-import java.time.Duration;
 
 public class NewIssueTest extends BaseTestClass {
 
-    NewIssueTest() throws IOException {
+    NewIssueTest(){
         this.properties = Utils.getProperties("NewIssueTest");
     }
 
     @Test
     public void verify_newIssue_functionality() {
-        driver.get("https://github.com/login");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         login.doLogin(Utils.decode(properties.getProperty("username")), Utils.decode(properties.getProperty("password")));
         dashboard.openRepositories();
         repo.doSearch("rstar-test");
